@@ -1,0 +1,54 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @designer_application.name %>
+</p>
+
+<p>
+  <strong>Birthday:</strong>
+  <%= @designer_application.birthday %>
+</p>
+
+<p>
+  <strong>Rut:</strong>
+  <%= @designer_application.rut %>
+</p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @designer_application.email %>
+</p>
+
+<p>
+  <strong>Address:</strong>
+  <%= @designer_application.address %>
+</p>
+
+<p>
+  <strong>Education level:</strong>
+  <%= @designer_application.education_level %>
+</p>
+
+<p>
+  <strong>Degree:</strong>
+  <%= @designer_application.degree %>
+</p>
+
+<p>
+  <strong>Years of experience:</strong>
+  <%= @designer_application.years_of_experience %>
+</p>
+
+<p>
+  <strong>About:</strong>
+  <%= @designer_application.about %>
+</p>
+
+<p>
+  <strong>Status:</strong>
+  <%= @designer_application.status %>
+</p>
+
+<%= link_to 'Edit', edit_designer_application_path(@designer_application) %> |
+<%= link_to 'Back', designer_applications_path %>

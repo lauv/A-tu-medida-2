@@ -1,0 +1,45 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Designer Applications</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Birthday</th>
+      <th>Rut</th>
+      <th>Email</th>
+      <th>Address</th>
+      <th>Education level</th>
+      <th>Degree</th>
+      <th>Years of experience</th>
+      <th>About</th>
+      <th>Status</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @designer_applications.each do |designer_application| %>
+      <tr>
+        <td><%= designer_application.name %></td>
+        <td><%= designer_application.birthday %></td>
+        <td><%= designer_application.rut %></td>
+        <td><%= designer_application.email %></td>
+        <td><%= designer_application.address %></td>
+        <td><%= designer_application.education_level %></td>
+        <td><%= designer_application.degree %></td>
+        <td><%= designer_application.years_of_experience %></td>
+        <td><%= designer_application.about %></td>
+        <td><%= designer_application.status %></td>
+        <td><%= link_to 'Show', designer_application %></td>
+        <td><%= link_to 'Edit', edit_designer_application_path(designer_application) %></td>
+        <td><%= link_to 'Destroy', designer_application, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Designer Application', new_designer_application_path %>

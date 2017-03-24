@@ -1,0 +1,2 @@
+class DesignerApplication < ApplicationRecord
+end
