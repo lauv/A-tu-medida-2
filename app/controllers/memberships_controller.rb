@@ -1,5 +1,6 @@
 class MembershipsController < ApplicationController
   before_action :set_membership, only: [:show, :edit, :update, :destroy]
+  before_action :authenticate_user!
 
   # GET /memberships
   # GET /memberships.json
@@ -10,7 +11,8 @@ class MembershipsController < ApplicationController
   # GET /memberships/1
   # GET /memberships/1.json
   def show
-  end
+    @categories = Category.all
+  end 
 
   # GET /memberships/new
   def new

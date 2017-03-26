@@ -10,11 +10,12 @@ class DesignerApplicationsController < ApplicationController
   # GET /designer_applications/1
   # GET /designer_applications/1.json
   def show
+    @categories = Category.all
   end
-
   # GET /designer_applications/new
   def new
     @designer_application = DesignerApplication.new
+    @categories = Category.all
   end
 
   # GET /designer_applications/1/edit

@@ -22,3 +22,12 @@ Things you may want to cover:
 * Deployment instructions
 
 * ...
+
+
+Pendiente con Heroku:
+heroku config:set email=tuemail@gmail.com
+heroku config:set email_password=tupasswords
+
+en production.rb
+config.action_mailer.default_url_options = { :host
+=> 'cryptic-meadow-23931.herokuapp.com' }

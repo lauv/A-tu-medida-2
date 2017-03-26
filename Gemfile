@@ -14,6 +14,9 @@ gem 'fog'
 gem 'cancancan' #rails g cancan:ability
 gem 'rollbar'
 gem 'kaminari' #rails g kaminari:views bootstrap3
+gem 'dotenv-rails'
+gem 'activeadmin', github: 'activeadmin'
+gem 'inherited_resources', '~> 1.7'
 # Use postgresql as the database for Active Record
 gem 'pg', '~> 0.18'
 # Use Puma as the app server
