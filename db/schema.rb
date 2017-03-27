@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170327043207) do
+ActiveRecord::Schema.define(version: 20170327045925) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -96,6 +96,8 @@ ActiveRecord::Schema.define(version: 20170327043207) do
     t.string   "photo3"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
+    t.integer  "user_id"
+    t.index ["user_id"], name: "index_portfolios_on_user_id", using: :btree
   end
 
   create_table "user_memberships", force: :cascade do |t|
@@ -152,6 +154,7 @@ ActiveRecord::Schema.define(version: 20170327043207) do
 
   add_foreign_key "category_users", "categories"
   add_foreign_key "category_users", "users"
+  add_foreign_key "portfolios", "users"
   add_foreign_key "user_memberships", "memberships"
   add_foreign_key "user_memberships", "users"
   add_foreign_key "works", "users"

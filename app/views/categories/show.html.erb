@@ -1,9 +1,80 @@
-<p id="notice"><%= notice %></p>
+<section class="wrapper">
+	<div class="divider_border_gray"></div>
+	<div id="filters" class="clearfix">
+		<div id="sort_filters">
+			<select name="orderby" class="selectbox">
+				<option value="popularity">Ordenar por Populares</option>
+				<option value="rating">Ordenar por Ranking</option>
+				<option value="date" selected='selected'>Ordenar por Mas Nuevo</option>
+			</select>
+		</div>
+		<div id="view_change">
+			<a href="grid.html" class="grid_bt"></a>
+			<a href="list.html" class="list_bt"></a>
+		</div>
+	</div>
+	<!-- End filters -->
+	<div class="container">
+		<% @users.each do |user| %>
+			<div class="row strip_list wow fadeIn animated" data-wow-delay="0.2s">
+				<div class="col-md-5">
+					<div class="img_wrapper">
+						<div class="img_container">
+							<a href="detail-page.html">
+								<%= image_tag(user.portfolio.photo1, class:"img-responsive") if user.portfolio.photo1? %>
+								<div class="short_info">
+								
+								</div>
+							</a>
+						</div>
+					</div>
+					<!-- End img_wrapper -->
+				</div>
+				<div class="col-md-7">
+					<h3><span> <%= user.name %></span></h3>
+					<p><%= user.portfolio.description %> </p>
+					<p><a href="<%= category_portfolio_path(@category.id, user.portfolio.id) %>" class="btn_1">Ver mas</a>
+					</p>
+				</div>
+			</div>			
+			<% end %>
+		<!-- End strip list -->
+	</div>
+		<!-- End strip list -->
 
-<p>
-  <strong>Name:</strong>
-  <%= @category.name %>
-</p>
 
-<%= link_to 'Edit', edit_category_path(@category) %> |
-<%= link_to 'Back', categories_path %>
+		<nav class="pagination-wrapper">
+			<ul class="pagination">
+				<li><a href="#">1</a>
+				</li>
+				<li><a href="#">2</a>
+				</li>
+				<li><a href="#">3</a>
+				</li>
+				<li><a href="#">4</a>
+				</li>
+				<li><a href="#">5</a>
+				</li>
+				<li>
+					<a href="#" aria-label="Siguiente">
+						<span aria-hidden="true">&raquo;</span>
+					</a>
+				</li>
+			</ul>
+		</nav>
+		<!-- End pagination -->
+
+		<!-- End row -->
+	</div>
+	<!-- End container -->
+</section>
+	<!-- End section -->
+
+	<!-- <div class="container margin_60">
+		<div class="banner">
+			<h3>Sea id tantas doctus aeterno tation mollis appetere in per, usu dicat novum eirmod ei in sit audire equidem persecuti, eu integre alterum principes qui.</h3>
+			<a href="#" class="btn_1 white">Explore Now</a>
+		</div> -->
+		<!-- end banner -->
+	<!-- </div> -->
+	<!-- end container -->

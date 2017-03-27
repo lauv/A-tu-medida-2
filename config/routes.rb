@@ -5,7 +5,7 @@ Rails.application.routes.draw do
   get 'home/index'
 
 	resources :categories do
-		resources :portfolio, only: [:show]
+		resources :portfolios, only: [:show]
 	end
 	resources :designer_applications, only: [:show, :new, :create]
 	get 'users/show'
