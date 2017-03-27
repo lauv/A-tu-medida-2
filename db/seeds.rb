@@ -15,7 +15,7 @@ UserMembership.destroy_all
 DesignerApplication.destroy_all
 Category.destroy_all
 User.destroy_all
-# Membership.destroy_all
+Membership.destroy_all
 
 comuna= Commune.create!(name: "Santiago")
 a = Category.create!(name:"Restauración / Ateraciones")
