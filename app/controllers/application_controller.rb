@@ -8,7 +8,7 @@ class ApplicationController < ActionController::Base
       elsif resource.designer?
       	request.env['omniauth.origin'] || stored_location_for(resource) || works_index_path
       else
-      	request.env['omniauth.origin'] || stored_location_for(resource) || root_path
+      	request.env['omniauth.origin'] || stored_location_for(resource) || admin_root_path
     	end
     else
       request.env['omniauth.origin'] || stored_location_for(resource) || admin_dashboard_path

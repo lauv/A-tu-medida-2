@@ -36,3 +36,10 @@ config.action_mailer.default_url_options = { :host
 heroku config:aws_secret_key_id=AKIAIWIJTICKW7AURFNQ
 heroku config:aws_secret_access_key=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
 heroku config:aws_dir=a-tu-medida
+
+SCOPED COLLECTION
+No confundir scopes con scoped_collectioncontroller do
+ def scoped_collection
+ Movie.includes(:tags)
+ end
+ end
