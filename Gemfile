@@ -8,6 +8,7 @@ end
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.0.2'
+gem 'dotenv-rails'
 gem 'carrierwave'
 gem 'mini_magick'
 gem 'devise'
@@ -15,7 +16,6 @@ gem 'fog'
 gem 'cancancan' #rails g cancan:ability
 gem 'rollbar'
 gem 'kaminari' #rails g kaminari:views bootstrap3
-gem 'dotenv-rails'
 gem 'activeadmin', github: 'activeadmin'
 gem 'inherited_resources', '~> 1.7'
 gem 'omniauth'

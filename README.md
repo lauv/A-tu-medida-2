@@ -25,17 +25,17 @@ Things you may want to cover:
 
 
 Pendiente con Heroku:
-heroku config:set email=tuemail@gmail.com
-heroku config:set email_password=tupasswords
+heroku config:set email=clearuniversek@gmail.com
+heroku config:set email_password=daniel00
 
 en production.rb
 config.action_mailer.default_url_options = { :host
 => 'cryptic-meadow-23931.herokuapp.com' }
 
 
-heroku config:aws_secret_key_id=AKIAIWIJTICKW7AURFNQ
-heroku config:aws_secret_access_key=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
-heroku config:aws_dir=a-tu-medida
+heroku config:set aws_secret_key_id=AKIAIWIJTICKW7AURFNQ
+heroku config:set aws_secret_access_key=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
+heroku config:set aws_dir=a-tu-medida
 
 SCOPED COLLECTION
 No confundir scopes con scoped_collectioncontroller do
