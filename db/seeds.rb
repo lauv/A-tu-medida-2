@@ -114,6 +114,6 @@ end
 end
 
 
-# AdminUser.create!(email: 'admin@example.com', password: 'password', password_confirmation: 'password')
-# Membership.create!(name: "Normal", price: 20000)
-# Membership.create!(name: "Premium", price: 40000)
+AdminUser.create!(email: 'admin@example.com', password: 'password', password_confirmation: 'password')
+Membership.create!(name: "Normal", price: 20000)
+Membership.create!(name: "Premium", price: 40000)
