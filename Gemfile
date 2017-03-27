@@ -8,8 +8,9 @@ end
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.0.2'
-gem 'devise'
 gem 'carrierwave'
+gem 'mini_magick'
+gem 'devise'
 gem 'fog'
 gem 'cancancan' #rails g cancan:ability
 gem 'rollbar'

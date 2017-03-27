@@ -31,3 +31,8 @@ heroku config:set email_password=tupasswords
 en production.rb
 config.action_mailer.default_url_options = { :host
 => 'cryptic-meadow-23931.herokuapp.com' }
+
+
+heroku config:aws_secret_key_id=AKIAIWIJTICKW7AURFNQ
+heroku config:aws_secret_access_key=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
+heroku config:aws_dir=a-tu-medida

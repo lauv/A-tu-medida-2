@@ -1,4 +1,4 @@
-<%= form_for(portfolio) do |f| %>
+<%= form_for @portfolio, html: { multipart: true } do |f| %>
   <% if portfolio.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(portfolio.errors.count, "error") %> prohibited this portfolio from being saved:</h2>
@@ -17,18 +17,21 @@
   </div>
 
   <div class="field">
-    <%= f.label :photo1 %>
-    <%= f.text_field :photo1 %>
+    <%= f.file_field :photo1 %>
+    <%= f.hidden_field :photo1_cache %>
+    <%= image_tag(@portfolio.photo) if @portfolio.photo? %>
   </div>
 
   <div class="field">
-    <%= f.label :photo2 %>
-    <%= f.text_field :photo2 %>
+    <%= f.file_field :photo2 %>
+    <%= f.hidden_field :photo2_cache %>
+    <%= image_tag(@portfolio.photo) if @portfolio.photo? %>
   </div>
 
   <div class="field">
-    <%= f.label :photo3 %>
-    <%= f.text_field :photo3 %>
+    <%= f.file_field :photo3 %>
+    <%= f.hidden_field :photo3_cache %>
+    <%= image_tag(@portfolio.photo) if @portfolio.photo? %>
   </div>
 
   <div class="actions">
